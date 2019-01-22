@@ -1,12 +1,12 @@
 package transport
 
 import (
+	flowmessage "../pb"
 	"crypto/tls"
 	"crypto/x509"
-	log "github.com/Sirupsen/logrus"
-	flowmessage "github.com/cloudflare/goflow/pb"
-	proto "github.com/golang/protobuf/proto"
 	sarama "github.com/Shopify/sarama"
+	log "github.com/Sirupsen/logrus"
+	proto "github.com/golang/protobuf/proto"
 	"os"
 )
 

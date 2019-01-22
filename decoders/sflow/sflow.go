@@ -1,9 +1,9 @@
 package sflow
 
 import (
+	"../../decoders/utils"
 	"bytes"
 	"fmt"
-	"github.com/cloudflare/goflow/decoders/utils"
 )
 
 const (

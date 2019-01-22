@@ -1,11 +1,11 @@
 package producer
 
 import (
+	"../decoders/sflow"
+	flowmessage "../pb"
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/cloudflare/goflow/decoders/sflow"
-	flowmessage "github.com/cloudflare/goflow/pb"
 	"net"
 )
 
@@ -110,7 +110,7 @@ func ParseSampledHeader(flowMessage *flowmessage.FlowMessage, sampledHeader *sfl
 		(*flowMessage).IPTos = uint32(tos)
 		(*flowMessage).IPTTL = uint32(ttl)
 		(*flowMessage).TCPFlags = uint32(tcpflags)
-		
+
 		(*flowMessage).FragmentId = uint32(identification)
 		(*flowMessage).FragmentOffset = uint32(fragOffset)
 	}

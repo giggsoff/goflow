@@ -1,10 +1,10 @@
 package netflow
 
 import (
+	"../../decoders/utils"
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/cloudflare/goflow/decoders/utils"
 	"sync"
 )
 
